@@ -36,13 +36,13 @@ class Comment extends Component {
   }
 
   deleteComment = async () => {
-    await axios.delete("http://localhost:4000/api/comments/"+this.props.id);
+    await axios.delete("https://rolling-games-node.herokuapp.com/api/comments/"+this.props.id);
 
     this.props.getComments();
   }
 
   updateComment = async () => {
-    await axios.put("http://localhost:4000/api/comments/"+this.props.id, this.state);
+    await axios.put("https://rolling-games-node.herokuapp.com/api/comments/"+this.props.id, this.state);
 
 
     this.setState({content: ""})

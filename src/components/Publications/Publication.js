@@ -50,7 +50,7 @@ class Publication extends Component {
 
   getPublication = async () => {
 
-    const res = await axios.get("http://localhost:4000/api/publications/"+ this.props.match.params.id);
+    const res = await axios.get("https://rolling-games-node.herokuapp.com/api/publications/"+ this.props.match.params.id);
 
     const { title, img, content, author, createdAt: date } = res.data;
 
@@ -64,7 +64,7 @@ class Publication extends Component {
   }
 
   getComments = async () => {
-    const res = await axios.get("http://localhost:4000/api/comments/"+ this.props.match.params.id);
+    const res = await axios.get("https://rolling-games-node.herokuapp.com/api/comments/"+ this.props.match.params.id);
 
 
     this.setState({
@@ -75,16 +75,16 @@ class Publication extends Component {
   }
 
   deletePublication = async () => {
-    await axios.delete("http://localhost:4000/api/publications/"+ this.props.match.params.id);
-    const comments = await axios.get("http://localhost:4000/api/comments/" + this.props.match.params.id);
+    await axios.delete("https://rolling-games-node.herokuapp.com/api/publications/"+ this.props.match.params.id);
+    const comments = await axios.get("https://rolling-games-node.herokuapp.com/api/comments/" + this.props.match.params.id);
     comments.data.comments.forEach( async (comment) => {
-      await axios.delete("http://localhost:4000/api/comments/"+comment._id);
+      await axios.delete("https://rolling-games-node.herokuapp.com/api/comments/"+comment._id);
     })
     this.props.history.push("/")
   }
 
   updatePublication  = async () => {
-    await axios.put("http://localhost:4000/api/publications/"+this.props.match.params.id, this.state);
+    await axios.put("https://rolling-games-node.herokuapp.com/api/publications/"+this.props.match.params.id, this.state);
 
 
     this.setState({

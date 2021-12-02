@@ -32,7 +32,7 @@ class Register extends Component{
     const user = {...this.state};
     delete user.error;
 
-    const res = await axios.post("http://localhost:4000/api/register",user);
+    const res = await axios.post("https://rolling-games-node.herokuapp.com/api/register",user);
 
     if (this.state.password === this.state.confirm_password) {
       if (res.data.message === "User Created") {

@@ -5,7 +5,7 @@ import { format } from "timeago.js";
 class ViewPublication extends Component {
 
   deletePublication = async () => {
-    await axios.delete("http://localhost:4000/api/publications/"+this.props.id);
+    await axios.delete("https://rolling-games-node.herokuapp.com/api/publications/"+this.props.id);
     this.props.getPublications();
     this.props.history("/");
   }

@@ -11,7 +11,7 @@ class Dashboard extends Component{
   }
 
   getPublications = async () => {
-    const res = await axios.get("http://localhost:4000/api/publications")
+    const res = await axios.get("https://rolling-games-node.herokuapp.com/api/publications")
     this.setState({
       publications: res.data
     });

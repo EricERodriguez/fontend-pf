@@ -18,7 +18,7 @@ class CreateComment extends Component {
   createComment = async e => {
     e.preventDefault();
 
-    await axios.post("http://localhost:4000/api/comments",this.state)
+    await axios.post("https://rolling-games-node.herokuapp.com/api/comments",this.state)
 
     this.props.getComments();
 
