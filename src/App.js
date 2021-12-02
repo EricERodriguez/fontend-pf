@@ -36,7 +36,6 @@ class App extends Component{
   auth = (account) => {
     this.setState({account, isAuth: true})
     localStorage.setItem("acc", this.state.account._id);
-    reload()
   }
 
   desAuth = () => {
@@ -48,7 +47,7 @@ class App extends Component{
   componentWillMount = async () => {
     const acc = localStorage.getItem("acc");
     if(acc){
-      const res = await axios.get("https://rolling-games-node.herokuapp.com/api/users/"+acc);
+      const res = await axios.get("http://localhost:4000/api/users/"+acc);
       this.setState({account: res.data, isAuth: true, roles: res.data.role});
     }
   }

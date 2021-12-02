@@ -8,7 +8,7 @@ function useDatos() {
 
     useEffect(
         () => {
-            fetch('https://rolling-games-node.herokuapp.com/api/users/')
+            fetch('http://localhost:4000/api/users/')
         .then(res => res.json())
         .then(datos  => {
             (setElement(datos ))
@@ -31,7 +31,7 @@ function deleteUser(event, id) {
         alert("Ese usuario es ADMIN, no se puede borrar")
     } else {
         if (window.confirm("Esta seguro de borrar el usuario?")) {
-            axios.delete(`https://rolling-games-node.herokuapp.com/api/users/${id}`)
+            axios.delete(`http://localhost:4000/api/users/${id}`)
             .then(res => {
                 console.log(res);
                 console.log(res.data);

@@ -3,24 +3,27 @@ import PacmanLogo from "./ImgJuegos/PacmanLogo.png"
 import ControlesPacman from "./ImgJuegos/ControlesPacman.png"
 import { Card, Row, Col, Container, Button } from 'react-bootstrap';
 import PacmanAssets from "./ImgJuegos/PacmanAssets.png"
+import avisomodal from "./ImgJuegos/avisomodal.png"
 
 export default function Pacman() {
-    return (
-        <Fragment>
-            {/* Logo */}
-            <img src={PacmanLogo} width="40%" className="rounded mx-auto d-block" />
-            <br />
-            {/* Juego */}
-            <iframe src="https://pacmanrolling.netlify.app/" width="100%" height="500px"></iframe>
-            {/* Controles */}
-            <h3>Controles:</h3>
-            <img src={ControlesPacman} width="18%" />
-            <p>Presiona la Tecla N para iniciar el Juego Usá los direcciones de tu teclado para mover a Pacman. Si queres dejar en Mute el sonido presiona la tecla S</p>
-            <br />
-            {/* Info y Assets del juego */}
-            <Container fluid>
+  return (
+    <Fragment>
+      {/* Logo */}
+      <img src={PacmanLogo} width="40%" className="rounded mx-auto d-block" />
+      {/* Aviso no responsivo */}
+      <img id="alerta" src={avisomodal} width="100%" />
+      <br />
+      {/* Juego */}
+      <iframe src="https://pacmanrolling.netlify.app/" width="100%" height="500px"></iframe>
+      {/* Controles */}
+      <h3>Controles:</h3>
+      <img src={ControlesPacman} width="250px" />
+      <p>Presiona la Tecla N para iniciar el Juego Usá los direcciones de tu teclado para mover a Pacman. Si queres dejar en Mute el sonido presiona la tecla S</p>
+      <br />
+      {/* Info y Assets del juego */}
+      <Container fluid>
         <Row>
-          <Col>
+          <Col lg>
             <h3>Pacman</h3>
             <p>Viví la experiencia de jugar a uno de los juegos mas conocidos que marco un antes y un despues en el mundo Gaming. Pac-Man es una franquicia de videojuegos japonesa publicada, desarrollada y propiedad de Bandai Namco Entertainment</p>
           </Col>
@@ -31,6 +34,6 @@ export default function Pacman() {
           </Col>
         </Row>
       </Container>
-        </Fragment>
-    )
+    </Fragment>
+  )
 }

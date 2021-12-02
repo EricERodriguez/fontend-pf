@@ -44,6 +44,9 @@
   margin-bottom: 1rem;
   border: 1px solid skyblue;
 }
+.MuiGrid-root{
+  border-radius: 40px;
+}
 
 .card a{
   text-decoration: none;
@@ -60,6 +63,38 @@
   background-color: #1a0933;
 }
 
+
+#alerta{
+  display: none; 
+}
+
+@media screen and (max-width: 740px) {
+  #alerta{
+      display: block;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+  }
+
+  iframe{
+    display: none;
+}
+
+
+}
+
 .imgOjos{
   width: 30%;
+}
+
+.registroFont{
+  color: #1a0933;
+  font-size: 20px;
+  font-weight: bold;
+}
+.alert-success{
+  color: #1a0933;
+  font-size: 20px;
+  font-weight: bold;
 }

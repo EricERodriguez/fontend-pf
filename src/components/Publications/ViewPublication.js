@@ -5,7 +5,7 @@ import { format } from "timeago.js";
 class ViewPublication extends Component {
 
   deletePublication = async () => {
-    await axios.delete("https://rolling-games-node.herokuapp.com/api/publications/"+this.props.id);
+    await axios.delete("http://localhost:4000/api/publications/"+this.props.id);
     this.props.getPublications();
     this.props.history("/");
   }
@@ -16,7 +16,7 @@ class ViewPublication extends Component {
 
     return (
       <div className="card  border-success mb-4">
-        <div className="card-header bg-black d-flex justify-content-between">
+        <div className="card-header bg-black d-flex justify-content-between mt-5">
           <h3 className="card-title">{title}</h3>
         </div>
         <div className="card-body">

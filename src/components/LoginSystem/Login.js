@@ -16,11 +16,12 @@ class Login extends Component{
     const user = {...this.state};
     delete user.error;
 
-    const res = await axios.post("https://rolling-games-node.herokuapp.com/api/login", user);
-
+    const res = await axios.post("http://localhost:4000/api/login", user);
+    
     if(typeof res.data == "string"){
       this.setState({error: res.data});
     }else{
+      window.location="/"
       delete res.data.password
       this.props.auth(res.data);
     }

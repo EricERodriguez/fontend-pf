@@ -28,7 +28,6 @@ export function CenteredText() {
       direction="column"
       justify="space-around"
       alignItems="center"
-      spacing={3}
     >
       <Grid item xs >
         <Typography variant="body1" align="center" gutterBottom="true" >
@@ -42,7 +41,7 @@ export function CenteredText() {
       </Grid>
       <Grid item xs>
         <Typography variant="body1" align="center" gutterBottom="true">
-        Estamos constantemente actualizando nuestro amplio catalogo para que cada ves puedas elegir los mejores titulos.
+        Estamos constantemente actualizando nuestro amplio catálogo para que cada vez puedas elegir los mejores titulos.
         </Typography>
       </Grid>
     </Grid>

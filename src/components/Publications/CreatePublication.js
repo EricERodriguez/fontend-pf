@@ -12,7 +12,7 @@ class CreatePublication extends Component {
   createPublication = async e => {
     e.preventDefault();
 
-    await axios.post("https://rolling-games-node.herokuapp.com/api/publications/", this.state);
+    await axios.post("http://localhost:4000/api/publications/", this.state);
 
     this.props.getPublications();
 

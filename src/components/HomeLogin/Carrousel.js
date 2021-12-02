@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel'
+import baner0 from './Assets/Img/baner0.jpeg'
 import baner1 from './Assets/Img/baner1.png'
 import baner2 from './Assets/Img/baner2.png'
 
@@ -9,7 +10,7 @@ function Carrousel(){
         <Carousel.Item>
             <img
             className="d-block w-100"
-            src={baner1}
+            src={baner0}
             alt="First slide"
             />
         </Carousel.Item>

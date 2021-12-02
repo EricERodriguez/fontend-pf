@@ -3,22 +3,25 @@ import { Card, Row, Col, Container, Button } from 'react-bootstrap';
 import ControlesNeoMartin from "./ImgJuegos/ControlesNeoMartin.png"
 import NeoMartinAsset01 from "./ImgJuegos/NeoMartinAssets01.png"
 import NeoMartinAsset02 from "./ImgJuegos/NeoMartinAssets02.png"
+import avisomodal from "./ImgJuegos/avisomodal.png"
 
 export default function NeoMartin() {
     return (
         <Fragment>
+            {/* Aviso no responsivo */}
+            <img id="alerta" src={avisomodal} width="100%" />
             {/* Juego */}
             <iframe width="100%" height="500px" src="//v6p9d9t4.ssl.hwcdn.net/html/4802772/index.html" msallowfullscreen="true" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" id="game_drop" allowtransparency="true"></iframe>
             {/* Controles */}
             <br />
             <h3>Controles:</h3>
-            <img src={ControlesNeoMartin} width="20%" />
-            <p>Usa las teclas izquiera y derecha del teclado para mover a ambos lados al Personaje y hacé click en la pantalla para emepzar la aventura!</p>
+            <img src={ControlesNeoMartin} width="280px" />
+            <p>Usa las teclas izquiera y derecha del teclado para mover a ambos lados al Personaje y hacé click en la pantalla para empezar la aventura!</p>
             <br />
             {/* Info y Assets del juego */}
             <Container fluid>
                 <Row>
-                    <Col>
+                    <Col lg>
                         <h3>Neo Martín</h3>
                         <p>Una nueva aventura comienza para Martín donde tendrá que obtener el mayor puntaje posible. Ayudá a Martín a recolectar las modenas sin perder sus vidas!</p>
                     </Col>
